@@ -29,17 +29,20 @@ export const cartSlice = createSlice({
         },
 
         decreaseQty: (state, action) => {
-            const productTodecreaseQty = action.payload;
-            const productExit = state.cartList.find((item) => item.id === productTodecreaseQty.id);
-            if (productExit.qty === 1) {
-                state.cartList = state.cartList.filter((item) => item.id !== productExit.id);
+            const id =
+                typeof action.payload === "object" && action.payload !== null
+                    ? action.payload.id
+                    : action.payload;
+
+            const existing = state.cartList.find((item) => item.id === id);
+            if (!existing) return; // <<< guard fixes the crash
+
+            if (existing.qty <= 1) {
+                state.cartList = state.cartList.filter((item) => item.id !== id);
             } else {
-                state.cartList = state.cartList.map((item) => item.id === productExit.id ?
-                    { ...productExit, qty: productExit.qty - 1 }
-                    : item)
+                existing.qty -= 1;
             }
         },
-
         deleteProduct: (state, action) => {
             const productToDelete = action.payload;
             state.cartList = state.cartList.filter(

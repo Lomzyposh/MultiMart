@@ -8,8 +8,10 @@ import { Routes, Route } from 'react-router-dom';
 // ✅ use react-toastify, not react-bootstrap
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Footer from './Components/Footer/Footer';
 
 const Home = lazy(() => import('./Pages/Home'));
+const Cart = lazy(() => import('./Pages/Cart'));
 
 export default function App() {
   return (
@@ -30,10 +32,12 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        Optional 404:
+        {/* Optional 404: */}
+        <Route path='/cart' element={<Cart />} />
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
 
+      <Footer />
     </Suspense>
   );
 }

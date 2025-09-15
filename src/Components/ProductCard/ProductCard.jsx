@@ -28,7 +28,7 @@ const ProductCard = ({ title, productItem }) => {
             <img src={productItem.imgUrl} alt="Image" onClick={() => handleClick()} />
 
             <div className="product-like">
-                <i class="fa-regular fa-heart fa-bounce fa-xl"></i>
+                <i className="fa-regular fa-heart fa-bounce fa-xl"></i>
             </div>
 
             <div className="products-details">
@@ -43,7 +43,7 @@ const ProductCard = ({ title, productItem }) => {
                 <div className="price">
                     <h4>${productItem.price}</h4>
                     <button className="add" aria-label='Add' type='submit' onClick={() => handleAdd(productItem)}>
-                        <i class="fa-solid fa-plus"></i>
+                        <i className="fa-solid fa-plus"></i>
                     </button>
                 </div>
             </div>

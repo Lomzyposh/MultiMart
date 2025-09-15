@@ -1,0 +1,54 @@
+footer {
+    background-color: #0f3460;
+    padding: 80px 0;
+    color: #fff;
+}
+
+footer .box {
+    padding: 0 20px;
+}
+
+footer h1 {
+    margin: 0;
+    font-size: 25px;
+    font-weight: 800;
+    width: max-content;
+}
+
+footer .logo{
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+footer h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+footer .row{
+    justify-content: center;
+}
+
+footer p {
+    margin: 20px 0;
+    line-height: 1.8;
+    color: #b8b7b7;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+footer ul li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    color: #b8b7b7;
+    transition: 0.3s ease-in-out;
+}
+
+footer ul li:hover {
+    color: #fff;
+}
