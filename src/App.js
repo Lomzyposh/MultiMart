@@ -33,6 +33,7 @@ export default function App() {
         Optional 404:
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
+
     </Suspense>
   );
 }
