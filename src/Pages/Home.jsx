@@ -1,4 +1,4 @@
-import { Fragment } from "react";
+ import { Fragment } from "react";
 import Wrapper from "../Components/Wrapper/Wrapper";
 import Section from "../Components/Section";
 import { products, discoutProducts } from "../utils/products";

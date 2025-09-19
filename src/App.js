@@ -11,6 +11,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Components/Footer/Footer';
 
 const Home = lazy(() => import('./Pages/Home'));
+const Shop = lazy(() => import('./Pages/Shop'));
+
 const Cart = lazy(() => import('./Pages/Cart'));
 
 export default function App() {
@@ -34,6 +36,9 @@ export default function App() {
         <Route path="/" element={<Home />} />
         {/* Optional 404: */}
         <Route path='/cart' element={<Cart />} />
+        <Route path='/shop' element={<Shop />} />
+        {/* <Route path='/'></Route> */}
+
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
 

@@ -7,12 +7,6 @@ const initialState = {
     cartList: storedCartList
 }
 
-/* 
-I want you to explain to me well because I have never done CRA or Redux only vite.
-Where is still confusing is how the redux is what it is doing and how it is being used from Index.js to Store and the linked ones like navbar, cartslice and the rest . I want a full pledged way that i will surely understand. 
-
-*/
-
 export const cartSlice = createSlice({
     name: 'cart',
     initialState,
@@ -35,7 +29,7 @@ export const cartSlice = createSlice({
                     : action.payload;
 
             const existing = state.cartList.find((item) => item.id === id);
-            if (!existing) return; // <<< guard fixes the crash
+            if (!existing) return; // 
 
             if (existing.qty <= 1) {
                 state.cartList = state.cartList.filter((item) => item.id !== id);

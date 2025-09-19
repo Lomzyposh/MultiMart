@@ -35,17 +35,21 @@ const Cart = () => {
                                                     <Col xs={12} sm={9} className='cart-details'>
                                                         <h3>{item.productName}</h3>
                                                         <h4>
-                                                            ${item.price}.00 x {item.qty}
-                                                            <span>${productQty}.00</span>
+                                                            ${item.price}.00
+
                                                         </h4>
                                                     </Col>
-                                                    <Col>
+                                                    <Col xs={12} sm={3} className='cart-function'>
                                                         <button className="incCart" onClick={() => dispatch(addToCart({ product: item, num: 1 }))}>
                                                             <i className="fa-solid fa-plus"></i>
                                                         </button>
+                                                        <span >{item.qty}</span>
                                                         <button className="desCart" onClick={() => dispatch(decreaseQty(item.id))}>
                                                             <i className="fa-solid fa-minus"></i>
                                                         </button>
+                                                    </Col>
+                                                    <Col xs={12} className='cart-subtotal'>
+                                                        <h4>Subtotal : ${productQty}.00</h4>
                                                     </Col>
                                                 </Row>
                                             </Col>
