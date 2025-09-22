@@ -1,23 +1,42 @@
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+# Node modules
+node_modules/
 
-# dependencies
-/node_modules
-/.pnp
-.pnp.js
+# Build output
+dist/
+build/
 
-# testing
-/coverage
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 
-# production
-/build
-
-# misc
+# OS files
 .DS_Store
+Thumbs.db
+
+# Env files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Editor directories and files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Misc
+*.log
+*.tgz
+
+# Coverage directory
+coverage/
+
+# React Native
+.expo/
+
+# Parcel-bundler cache
+.cache/
+.parcel-cache/
