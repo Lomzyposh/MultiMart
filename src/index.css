@@ -13,7 +13,7 @@ html {
 body {
   background-color: #ffffff;
   margin: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Quicksand', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -55,11 +55,24 @@ button {
   gap: 10px;
 }
 
+
+
 .heading h1 {
   width: fit-content;
   text-align: center;
   margin: 20px auto 30px !important;
 }
+
+
+.nav-user-email {
+  max-width: 150px;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
+}
+
 
 .images-container {
   display: flex;
@@ -104,6 +117,9 @@ button {
   background: #f6f9fc;
   height: auto;
 }
+.text-green{
+  color: #28a745 !important;
+}
 
 .cart-items .cart-total {
   background-color: white;
@@ -130,6 +146,26 @@ button {
   height: 100%;
   max-width: 300px;
   object-fit: contain;
+}
+
+.checkout {
+  background-color: #0f3460;
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  position: sticky;
+  bottom: 20px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.checkout:hover {
+  background-color: #162447;
 }
 
 @media (max-width: 767px) {
@@ -190,7 +226,8 @@ button {
   color: #0f3460;
   padding: 3px;
 }
-.cart-function span{
+
+.cart-function span {
   font-size: 18px;
   font-weight: 500;
   margin: 0 10px;
@@ -222,7 +259,7 @@ button {
   color: #0f3460;
 }
 
-.cart-subtotal{
+.cart-subtotal {
   text-align: right;
   padding: 10px;
 }

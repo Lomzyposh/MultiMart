@@ -47,11 +47,10 @@
 .btn-primary{
     background-color: #0f3460;
     border: none;
-    padding: 10px 30px;
+    padding: 10px 20px;
     border-radius: 30px;
     color: #fff;
     font-size: 18px;
-    margin-top: 20px;
     transition: 0.3s ease-in-out;
 }
 

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Col, Container, Row } from 'react-bootstrap';
 import { useDispatch, useSelector } from 'react-redux';
 import { addToCart, decreaseQty, deleteProduct } from '../App/features/cart/cartSlice';
+import { Link } from 'react-router-dom';
 
 const Cart = () => {
     const { cartList } = useSelector(state => state.cart);
@@ -15,6 +16,7 @@ const Cart = () => {
     }, []);
     return (
         <section className='cart-items'>
+         
             <Container>
                 <Row className='justify-content-center'>
                     <Col md={8}>
@@ -49,7 +51,7 @@ const Cart = () => {
                                                         </button>
                                                     </Col>
                                                     <Col xs={12} className='cart-subtotal'>
-                                                        <h4>Subtotal : ${productQty}.00</h4>
+                                                        <h4>Subtotal : <span className='text-green'>${productQty}.00</span></h4>
                                                     </Col>
                                                 </Row>
                                             </Col>
@@ -68,7 +70,9 @@ const Cart = () => {
                                 <h4>Total Price :</h4>
                                 <h3>${totalPrice}.00</h3>
                             </div>
+
                         </div>
+                        <Link to='/checkout' className="checkout">Proceed to Checkout</Link>
                     </Col>
                 </Row>
             </Container>

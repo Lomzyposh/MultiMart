@@ -9,10 +9,14 @@ import { Routes, Route } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './Components/Footer/Footer';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import ProtectedRoute from './auth/ProtectedRoute';
+import Checkout from './Pages/Checkout';
+import CartButton from './Components/CartButton/CartButton';
 
 const Home = lazy(() => import('./Pages/Home'));
 const Shop = lazy(() => import('./Pages/Shop'));
-
 const Cart = lazy(() => import('./Pages/Cart'));
 
 export default function App() {
@@ -34,13 +38,20 @@ export default function App() {
 
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* Optional 404: */}
+
+        {/* <Route element={<ProtectedRoute />}> */}
+          <Route path="/checkout" element={<Checkout />} />
+        {/* </Route> */}
+
         <Route path='/cart' element={<Cart />} />
         <Route path='/shop' element={<Shop />} />
-        {/* <Route path='/'></Route> */}
+        <Route path='/login' element={<Login />} />
+        <Route path='/signUp' element={<Signup />} />
 
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>
+
+      <CartButton />
 
       <Footer />
     </Suspense>

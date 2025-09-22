@@ -95,6 +95,7 @@
 
 .logo {
     font-size: 25px;
+    font-family: 'Poppins', sans-serif;
     font-weight: 500;
     color: black;
     margin: 0;
@@ -107,13 +108,17 @@
     align-items: center;
     gap: 5px;
     font-size: 10px !important;
-    padding: 0.8rem 0.5rem 0.2rem !important;
 }
 
 .nav-link-label {
     color: black;
     font-size: 18px !important;
     font-weight: 600;
+}
+
+.nav-link-label:hover {
+    color: #0f3460;
+    transition: 0.3s ease-in-out;
 }
 
 .nav-icon {
