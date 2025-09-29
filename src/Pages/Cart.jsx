@@ -72,7 +72,7 @@ const Cart = () => {
                             </div>
 
                         </div>
-                        <Link to='/checkout' className="checkout">Proceed to Checkout</Link>
+                        <Link to='/payment' className="checkout">Proceed to Checkout</Link>
                     </Col>
                 </Row>
             </Container>

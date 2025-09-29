@@ -14,9 +14,11 @@ import Signup from './Pages/Signup';
 import ProtectedRoute from './auth/ProtectedRoute';
 import Checkout from './Pages/Checkout';
 import CartButton from './Components/CartButton/CartButton';
+import CartPaymentPage from './Pages/paymentPage/PaymentPage';
 
 const Home = lazy(() => import('./Pages/Home'));
 const Shop = lazy(() => import('./Pages/Shop'));
+const Product = lazy(() => import('./Pages/Product'))
 const Cart = lazy(() => import('./Pages/Cart'));
 
 export default function App() {
@@ -45,8 +47,10 @@ export default function App() {
 
         <Route path='/cart' element={<Cart />} />
         <Route path='/shop' element={<Shop />} />
+        <Route path='/shop/:id' element={<Product />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signUp' element={<Signup />} />
+        <Route path='/payment' element={<CartPaymentPage />} />
 
         <Route path="*" element={<div>Not Found</div>} />
       </Routes>

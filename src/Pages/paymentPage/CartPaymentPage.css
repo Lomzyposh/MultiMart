@@ -1,0 +1,81 @@
+.payment-container {
+  min-height: 100vh;
+  background-color:white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.payment-card {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  text-align: center;
+  color: #0f3460;
+  margin-bottom: 20px;
+}
+
+.payment-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.payment-form label {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #0f3460;
+}
+
+.payment-form input,
+.payment-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.payment-form input:focus,
+.payment-form textarea:focus {
+  outline: none;
+  border: 1px solid #0f3460;
+  box-shadow: 0px 0px 5px rgba(15, 52, 96, 0.4);
+}
+
+textarea {
+  resize: none;
+  height: 80px;
+}
+
+.pay-btn {
+  background: #0f3460;
+  color: white;
+  border: none;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background: black;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .payment-card {
+    padding: 20px;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+}
